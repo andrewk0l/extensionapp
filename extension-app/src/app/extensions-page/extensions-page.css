@@ -1,0 +1,45 @@
+.extensions-page {
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+.extensions-page.dark-theme {
+  background: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
+
+.extensions-page.light-theme {
+  background: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.filter-section {
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.grid-section {
+  margin-top: 20px;
+}
+
+.filter-section,
+.grid-section {
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 15px;
+  }
+
+  .filter-section {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,23 @@
+.remove-button {
+  background-color: inherit;
+  color: white;
+  border-color: rgb(252, 246, 246);
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.remove-button:hover {
+  background-color: hsl(3, 71%, 56%);
+}
+
+:host-context(.light-theme) .remove-button {
+  color: black; /* White text for contrast */
+  border-color: black;
+}
+
+:host-context(.light-theme) .remove-button:hover {
+  background-color: hsl(3, 71%, 56%); /* Same darker red on hover */
+}

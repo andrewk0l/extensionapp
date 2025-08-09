@@ -1,0 +1,30 @@
+<div
+  class="extensions-page"
+  [class.dark-theme]="isDarkTheme"
+  [class.light-theme]="!isDarkTheme"
+>
+  <div class="page-container">
+    <app-extensions-header
+      [isDarkTheme]="isDarkTheme"
+      (themeToggled)="onThemeToggle()"
+    >
+    </app-extensions-header>
+
+    <div class="filter-section">
+      <app-filter-tabs
+        [activeFilter]="currentFilter"
+        (filterChanged)="onFilterChanged($event)"
+      >
+      </app-filter-tabs>
+    </div>
+
+    <div class="grid-section">
+      <app-extensions-grid
+        [extensions]="filteredExtensions"
+        (toggleExtension)="onExtensionToggle($event)"
+        (removeExtension)="onExtensionRemove($event)"
+      >
+      </app-extensions-grid>
+    </div>
+  </div>
+</div>

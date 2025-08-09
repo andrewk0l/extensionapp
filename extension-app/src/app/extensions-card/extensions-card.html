@@ -1,0 +1,16 @@
+<div class="extension-card">
+  <div class="card-header">
+    <img [src]="extension.logo" [alt]="extension.name" class="extension-logo" />
+
+    <div class="card-content">
+      <h3 class="extension-name">{{ extension.name }}</h3>
+      <p class="extension-description">{{ extension.description }}</p>
+    </div>
+  </div>
+
+  <div class="card-footer">
+    <app-remove-button (Clicked)="onRemove()"></app-remove-button>
+    <app-toggle-button [isActive]="extension.isActive" (toggled)="onToggle()">
+    </app-toggle-button>
+  </div>
+</div>

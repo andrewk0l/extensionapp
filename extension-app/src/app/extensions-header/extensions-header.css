@@ -1,0 +1,75 @@
+.extensions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  border: 1px solid #3a3d4a;
+  margin-bottom: 30px;
+  border-radius: 24px;
+  background-color: hsl(226, 25%, 17%);
+}
+
+:host-context(.light-theme) .extensions-header {
+  background-color: white;
+}
+
+.logo-text {
+  fill: #091540; /* Default dark blue for light theme */
+  transition: fill 0.3s ease; /* Smooth color transition */
+}
+
+:host-context(.dark-theme) .logo-text {
+  fill: #ffffff;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.extensions-logo {
+  height: 32px;
+  width: auto;
+}
+
+.extensions-title {
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle {
+  border: 1px solid #3a3d4a;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+:host-context(.dark-theme) .theme-toggle {
+  background-color: #3a3d4a;
+}
+
+:host-context(.dark-theme) .theme-toggle:hover {
+  background-color: hsl(226, 11%, 37%);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.theme-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}

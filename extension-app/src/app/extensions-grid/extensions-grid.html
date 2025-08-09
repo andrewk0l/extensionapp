@@ -1,0 +1,10 @@
+<div class="extensions-grid">
+  @for (extension of extensions; track extension.name) {
+  <app-extensions-card
+    [extension]="extension"
+    (toggleExtension)="onToggleExtension($event)"
+    (removeExtension)="onRemoveExtension($event)"
+  >
+  </app-extensions-card>
+  }
+</div>
