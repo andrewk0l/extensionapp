@@ -59,6 +59,13 @@
 .tab-button.active:hover {
   background-color: #c82333; /* Darker red on hover */
 }
+:host-context(.light-theme) .tab-button:hover {
+  background-color: hsl(226, 11%, 37%);
+}
+
+:host-context(.light-theme) .tab-button.active:hover {
+  background-color: #c82333;
+}
 
 @media (max-width: 480px) {
   .filter-title {
